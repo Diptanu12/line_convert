@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Spaces with Underscores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #result {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Replace Spaces with Underscores</h2>
+    <input type="text" id="inputText" placeholder="Paste your text here">
+    <button onclick="replaceSpaces()">Convert</button>
+    <div id="result"></div>
+
+    <script>
+        function replaceSpaces() {
+            const inputText = document.getElementById("inputText").value;
+            const resultText = inputText.replace(/ /g, "_");
+            document.getElementById("result").textContent = resultText;
+        }
+    </script>
+</body>
+</html>
