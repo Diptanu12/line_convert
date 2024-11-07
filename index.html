@@ -33,7 +33,7 @@
     <script>
         function replaceSpaces() {
             const inputText = document.getElementById("inputText").value;
-            const resultText = inputText.replace(/ /g, "_");
+            const resultText = inputText.replace(/ /g, "_").toLowerCase();
             document.getElementById("result").textContent = resultText;
         }
     </script>
